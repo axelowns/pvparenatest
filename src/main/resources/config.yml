@@ -1,0 +1,43 @@
+# World the matches are played in (created automatically if it does not exist).
+world: pvp_world
+
+# Half-size of the arena. 500 = a barrier 500 blocks in every direction (1000x1000 area).
+arena-radius: 500
+
+# Minutes players get to gather gear before the final fight.
+grind-minutes: 30
+
+# Seconds of frozen, invulnerable countdown after everyone is teleported to the center.
+fight-countdown-seconds: 10
+
+# Arenas are placed at random spots within +/- this many blocks of 0,0 in the PvP world.
+spawn-range: 50000
+# Minimum distance between the centers of two running matches.
+min-center-distance: 3000
+
+# Players spawn randomly within this radius of the arena center (must be < arena-radius)...
+player-spawn-radius: 400
+# ...and try to be at least this far from each other.
+min-player-distance: 150
+
+# Spread of the players when they are teleported to the center for the final fight.
+fight-spawn-radius: 15
+
+# Can players hurt each other during the 30 minute gear phase?
+pvp-during-grind: false
+
+# Shrinks the barrier during the final fight so the match always ends.
+fight-shrink:
+  enabled: true
+  final-size: 50            # final border size (blocks across)
+  duration-seconds: 180     # time to shrink from full size to final size
+  outside-damage: 4.0       # damage per second while outside the shrinking border
+
+# Seconds between the match ending and everyone being sent back.
+end-delay-seconds: 10
+
+# Maximum matches running at the same time.
+max-concurrent-matches: 10
+
+# Commands players may use while inside a match (permission pvparena.bypass ignores this).
+allowed-commands: [pvp, msg, tell, w, r, reply]

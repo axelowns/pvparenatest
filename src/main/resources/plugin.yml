@@ -1,0 +1,19 @@
+name: PvpArena
+main: dev.pvparena.PvpArenaPlugin
+version: 1.0.0
+api-version: '1.21'
+description: Queue for 1v1 up to 1v1v1v1v1 survival PvP matches.
+commands:
+  pvp:
+    description: Open the PvP queue menu
+    usage: /pvp [leave|stop]
+    permission: pvparena.use
+permissions:
+  pvparena.use:
+    default: true
+  pvparena.admin:
+    description: Allows /pvp stop
+    default: op
+  pvparena.bypass:
+    description: Use any command while inside a match
+    default: op
