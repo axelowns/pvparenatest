@@ -161,7 +161,7 @@ final class MatchListener implements Listener {
         Location to = e.getTo();
 
         switch (e.getCause()) {
-            case ENDER_PEARL, CHORUS_FRUIT -> {
+               case ENDER_PEARL, CONSUMABLE_EFFECT -> {
                 if (!to.getWorld().equals(m.world) || m.cheb(to.getX(), to.getZ()) > m.halfSize) {
                     e.setCancelled(true);
                 }
